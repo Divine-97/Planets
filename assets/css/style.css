@@ -30,9 +30,120 @@ body {
 .container {
     width: 800px;
     max-width: 80%;
-    background-color:white;
+    background-color: orange;
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 0 10px 7px rgb(178, 202, 241);
+    box-shadow: 0 0 10px 7px black;
     ;
+}
+
+#question {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.btn-grid {
+    display: flex;
+    flex-direction:column;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: rgb(255, 255, 0);
+}
+
+.btn:hover {
+    cursor: pointer;
+   
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.btn.correct {
+    background-color: rgb(24, 243, 4);
+}
+
+.btn.wrong {
+    background-color: rgba(243, 7, 7, 0.979);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-btn,
+.home-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 3px;
+    padding: 10px;
+    width: 10rem;
+}
+
+.score-area {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px auto;
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+.score-area p {
+    margin: 7px;
+}
+
+.score-area span {
+    padding: 0 10px;
+}
+
+.final-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    max-width: 80%;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px 7px black;
+    ;
+}
+
+.end-form-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    height: 1rem;
+    width: 14.5rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.last-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 3px;
+    padding: 10px;
+    width: 10rem;
 }
