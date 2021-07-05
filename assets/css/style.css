@@ -159,3 +159,32 @@ input {
 }
 
 /* media querries */
+@media only screen and (max-width: 320px) {
+    #heading {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        font-size: 2rem;
+    }
+    
+    #p {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        font-size: 2rem;
+    }
+
+    #question {
+        font-size: -2px;
+        font-weight:normal;
+    }
+
+    .btn-grid {
+        display: flex;
+        flex-direction:column;
+        gap: 7px;
+        margin: 20px 0;
+        
+        
+    }
+ }
