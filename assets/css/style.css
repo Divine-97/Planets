@@ -83,6 +83,10 @@ body {
     width: 10rem;
 }
 
+.hide {
+    display: none;
+}
+
 .score-area {
     display: flex;
     justify-content: center;

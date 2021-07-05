@@ -1,15 +1,23 @@
 const startButton = document.getElementById('start-btn');
+startButton.addEventListener('click', startGame);
 
 const homeButton = document.getElementById('homePage-btn');
+homeButton.classList.add('hide');
+
+const introHeading = document.getElementById('intro');
+
+const correctAnswersLabel = document.getElementById('correct');
+const wrongAnswersLabel = document.getElementById('incorrect');
+
+
 const questionContainerElement = document.getElementById('question-container');
 
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 
-let shuffledQuestion, currentQuestionIndex
 
-startButton.addEventListener('click', startGame);
- 
+
+let shuffledQuestion, currentQuestionIndex, correctAnswers, wrongAnswers;
 
 
 
@@ -17,13 +25,19 @@ startButton.addEventListener('click', startGame);
 
 
 function startGame() {
-
-    
+    // hide start btn when clicked
     startButton.classList.add('hide');
+    //hide the paragraph when start button is clicked
+    document. getElementById("p"). style. display = "none"; //hide.
+    
     questionContainerElement.classList.remove('hide');
+    answerButtonsElement.classList.remove('hide');
+
+    //shuffles the questions
     shuffledQuestion = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     setNextQuestion();
+    
     
       
 }
@@ -34,12 +48,16 @@ function setNextQuestion() {
 
 
 }
+ /**
+ * 
+ * @param {*} question 
+ */
 
 function showQuestion(question) {
     questionElement.innerText = question.question ;
     question.answers.forEach((answer) => {
         const button = document.createElement('button');
-        button.innerText = answer.text 
+        button.innerText = answer.text; 
         button.classList.add('btn');
         if (answer.correct) {
             button.dataset.correct = answer.correct;
@@ -49,13 +67,20 @@ function showQuestion(question) {
     });
 
 }
+
+//Resets questions
 function resetState() {
+    
   while (answerButtonsElement.firstChild) {
-    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 }
 
-
+function disableAnswerButtons() {
+    answerButtonsElement.childNodes.forEach((button) => {
+        button.disabled = true;
+    });
+}
 
 function selectAnswer(e) {
     disableAnswerButtons()
@@ -69,15 +94,58 @@ function selectAnswer(e) {
     });
     
     
+
+
+    setTimeout(() => {
+        if (shuffledQuestion.length > currentQuestionIndex + 1) {
+            currentQuestionIndex++;
+            setNextQuestion();
+        } else {
+            //end of game
+            startButton.innerHTML = ('Restart');
+            startButton.classList.remove('hide');
+            homeButton.classList.remove('hide');
+            answerButtonsElement.classList.add('hide');
+            document.querySelector('#question').innerHTML = 'Here is your score!';
+        }
+    }, 1000 * 2);
 }
+
+document.querySelector('#homePage-btn').addEventListener('click', () => {
+    window.location.href = 'index.html';
+});
+
+
+
+
+
+// 
+function updateStatistics(isCorrectAnswer) {
+    if (isCorrectAnswer) {
+        correctAnswers++;
+        correctAnswersLabel.innerText = correctAnswers;
+    } else {
+        wrongAnswers++;
+        wrongAnswersLabel.innerText = wrongAnswers;
+    }
+}
+
+function resetStatistics() {
+    correctAnswers = 0;
+    wrongAnswers = 0;
+    correctAnswersLabel.innerText = correctAnswers;
+    wrongAnswersLabel.innerText = wrongAnswers;
+}
+
+
+
 function setStatusClass(element, correct) {
-    clearStatusClass(element)
+    clearStatusClass(element);
     if (correct) {
-        element.classList.add('correct');   
+        element.classList.add('correct');
     } else {
         element.classList.add('wrong');
     }
-
 }
 
 function clearStatusClass(element) {
@@ -85,12 +153,17 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
 }
 
+function incrementScore() {
+
+    let oldScore = parseInt(document.getElementById("correct").innerText);
+    document.getElementById("correct").innerText = ++oldScore;
+
+}
 
 // list of questions
 
-const questions = [
-    {
-        question : 'Which is the smallest planet?', 
+const questions = [{
+        question : 'Which one of these is the smallest planet?', 
             answers: [{
                 text: 'Earth',
                 correct: false
@@ -118,7 +191,7 @@ const questions = [
             },
             {
                 text: 'A Lake',
-                correct: true
+                correct: false
             }
 
         ]
@@ -141,7 +214,7 @@ const questions = [
         ]
     },
     {
-        question: 'What is the sun mainly made from? ',
+        question: 'What is the Sun mainly made from? ',
         answers: [{
                 text: 'Gas',
                 correct: true
@@ -158,7 +231,7 @@ const questions = [
         ]
     },
     {
-        question: 'What is the closest planet to the sun? ',
+        question: 'What is the closest planet to the Sun? ',
         answers: [{
                 text: 'Neptune',
                 correct: false
@@ -220,13 +293,13 @@ const questions = [
             },
             {
                 text: 'Cold and Wet',
-                correct: true
+                correct: false
             }
 
         ]
     },
     {
-        question: 'Which is the coldest planet?',
+        question: 'Which one of these is the coldest planet?',
         answers: [{
                 text: 'Neptune',
                 correct: true
@@ -246,7 +319,7 @@ const questions = [
         question: 'Which planet has the most Moons?',
         answers: [{
                 text: 'Saturn',
-                correct: false
+                correct: true
             },
             {
                 text: 'Jupiter',
@@ -254,10 +327,9 @@ const questions = [
             },
             {
                 text: 'Uranus',
-                correct: true
+                correct: false
             }
 
         ]
-    },
+    }
 ]
-
