@@ -7,7 +7,7 @@ homeButton.classList.add('hide');
 const introHeading = document.getElementById('intro');
 
 const correctAnswersLabel = document.getElementById('correct');
-const wrongAnswersLabel = document.getElementById('incorrect');
+const incorrectAnswersLabel = document.getElementById('incorrect');
 
 
 const questionContainerElement = document.getElementById('question-container');
@@ -17,7 +17,7 @@ const answerButtonsElement = document.getElementById('answer-buttons');
 
 
 
-let shuffledQuestion, currentQuestionIndex, correctAnswers, wrongAnswers;
+let shuffledQuestion, currentQuestionIndex, correctAnswers, incorrectAnswers;
 
 
 
@@ -36,6 +36,7 @@ function startGame() {
     //shuffles the questions
     shuffledQuestion = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
+    resetStatistics()
     setNextQuestion();
     
     
@@ -93,8 +94,8 @@ function selectAnswer(e) {
         setStatusClass(button, button.dataset.correct);
     });
     
-    
 
+    updateStatistics(correct)
 
     setTimeout(() => {
         if (shuffledQuestion.length > currentQuestionIndex + 1) {
@@ -117,24 +118,22 @@ document.querySelector('#homePage-btn').addEventListener('click', () => {
 
 
 
-
-
 // 
 function updateStatistics(isCorrectAnswer) {
     if (isCorrectAnswer) {
         correctAnswers++;
         correctAnswersLabel.innerText = correctAnswers;
     } else {
-        wrongAnswers++;
-        wrongAnswersLabel.innerText = wrongAnswers;
+        incorrectAnswers++;
+        incorrectAnswersLabel.innerText = incorrectAnswers;
     }
 }
 
 function resetStatistics() {
     correctAnswers = 0;
-    wrongAnswers = 0;
+    incorrectAnswers = 0;
     correctAnswersLabel.innerText = correctAnswers;
-    wrongAnswersLabel.innerText = wrongAnswers;
+    incorrectAnswersLabel.innerText = incorrectAnswers;
 }
 
 
@@ -144,20 +143,13 @@ function setStatusClass(element, correct) {
     if (correct) {
         element.classList.add('correct');
     } else {
-        element.classList.add('wrong');
+        element.classList.add('incorrect');
     }
 }
 
 function clearStatusClass(element) {
     element.classList.remove('correct');
-    element.classList.remove('wrong');
-}
-
-function incrementScore() {
-
-    let oldScore = parseInt(document.getElementById("correct").innerText);
-    document.getElementById("correct").innerText = ++oldScore;
-
+    element.classList.remove('incorrect');
 }
 
 // list of questions

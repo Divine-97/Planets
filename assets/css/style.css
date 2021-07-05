@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
 body {
     padding: 0;
     margin: 0;
@@ -45,8 +47,10 @@ body {
 .btn-grid {
     display: flex;
     flex-direction:column;
-    gap: 5px;
-    margin: 20px 0;
+    gap: 7px;
+    margin: 20px 7rem;
+    
+    
 }
 
 .btn {
@@ -64,7 +68,7 @@ body {
     background-color: rgb(24, 243, 4);
 }
 
-.btn.wrong {
+.btn.incorrect {
     background-color: rgba(243, 7, 7, 0.979);
 }
 
