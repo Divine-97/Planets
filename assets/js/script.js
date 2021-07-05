@@ -118,7 +118,7 @@ document.querySelector('#homePage-btn').addEventListener('click', () => {
 
 
 
-// 
+// updates correct and incorrect answers
 function updateStatistics(isCorrectAnswer) {
     if (isCorrectAnswer) {
         correctAnswers++;
