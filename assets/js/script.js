@@ -155,18 +155,18 @@ function clearStatusClass(element) {
 // list of questions
 
 const questions = [{
-        question : 'Which one of these is the smallest planet?', 
+        question : 'Which one of these planets orbits backwards?', 
             answers: [{
-                text: 'Earth',
+                text: 'Jupiter',
                 correct: false
             },
             {
-                text: 'Mercury',
-                correct: true
+                text: 'Saturn',
+                correct: false
             },
             {
                 text: 'Venus',
-                correct: false
+                correct: true
             }
 
         ]
@@ -223,17 +223,17 @@ const questions = [{
         ]
     },
     {
-        question: 'What is the closest planet to the Sun? ',
+        question: 'What planet has the shortest day? ',
         answers: [{
                 text: 'Neptune',
                 correct: false
             },
             {
-                text: 'Mercury',
+                text: 'Jupiter',
                 correct: true
             },
             {
-                text: 'Venus',
+                text: 'Mercury',
                 correct: false
             }
 
@@ -257,13 +257,13 @@ const questions = [{
         ]
     },
     {
-        question: 'Which planet has the hottest temperature?',
+        question: 'Which planet has 48 hour days?',
         answers: [{
-                text: 'Earth',
+                text: 'Saturn',
                 correct: false
             },
             {
-                text: 'Jupiter',
+                text: 'Neptune',
                 correct: false
             },
             {
@@ -291,17 +291,17 @@ const questions = [{
         ]
     },
     {
-        question: 'Which one of these is the coldest planet?',
+        question: 'Which planet has the biggest moon?',
         answers: [{
-                text: 'Neptune',
+                text: 'Jupiter',
                 correct: true
             },
             {
-                text: 'Uranus',
+                text: 'Saturn',
                 correct: false
             },
             {
-                text: 'Saturn',
+                text: 'Uranus',
                 correct: false
             }
 
