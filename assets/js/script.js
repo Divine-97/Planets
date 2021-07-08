@@ -4,8 +4,6 @@ startButton.addEventListener('click', startGame);
 const homeButton = document.getElementById('homePage-btn');
 homeButton.classList.add('hide');
 
-const introHeading = document.getElementById('intro');
-
 const correctAnswersLabel = document.getElementById('correct');
 const incorrectAnswersLabel = document.getElementById('incorrect');
 
@@ -16,12 +14,7 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 
 
-
 let shuffledQuestion, currentQuestionIndex, correctAnswers, incorrectAnswers;
-
-
-
-
 
 
 function startGame() {
@@ -34,23 +27,18 @@ function startGame() {
     answerButtonsElement.classList.remove('hide');
 
     //shuffles the questions
-    shuffledQuestion = questions.sort(() => Math.random() - .5);
+    shuffledQuestion = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
-    resetStatistics()
+    resetStatistics();
     setNextQuestion();
-    
-    
-      
+        
 }
-
+// shows next question
 function setNextQuestion() {
     resetState();
     showQuestion(shuffledQuestion[currentQuestionIndex]);
-
-
 }
  /**
- * 
  * @param {*} question 
  */
 
@@ -64,9 +52,8 @@ function showQuestion(question) {
             button.dataset.correct = answer.correct;
         }
         button.addEventListener('click', selectAnswer);
-        answerButtonsElement.appendChild(button)
+        answerButtonsElement.appendChild(button);
     });
-
 }
 
 //Resets questions
@@ -84,7 +71,7 @@ function disableAnswerButtons() {
 }
 
 function selectAnswer(e) {
-    disableAnswerButtons()
+    disableAnswerButtons();
 
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct ;
@@ -95,7 +82,7 @@ function selectAnswer(e) {
     });
     
 
-    updateStatistics(correct)
+    updateStatistics(correct);
 
     setTimeout(() => {
         if (shuffledQuestion.length > currentQuestionIndex + 1) {
@@ -155,7 +142,7 @@ function clearStatusClass(element) {
 // list of questions
 
 const questions = [{
-        question : 'Which one of these planets orbits backwards?', 
+        question : 'Which one of these planets rotates backwards?', 
             answers: [{
                 text: 'Jupiter',
                 correct: false
@@ -257,7 +244,7 @@ const questions = [{
         ]
     },
     {
-        question: 'Which planet has 48 hour days?',
+        question: 'Which planet has the longest day?',
         answers: [{
                 text: 'Saturn',
                 correct: false
@@ -324,4 +311,4 @@ const questions = [{
 
         ]
     }
-]
+];
