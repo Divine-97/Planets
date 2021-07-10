@@ -9,6 +9,14 @@ Check out the live website [here](https://divine-97.github.io/Planets-Quiz/).
 
 This is website is a Planet quiz game with basic questions about our Planets. The main purpose of this quiz is to test out the users knowledge for planets.
 
+## Features
+* Heading introduction to the game.
+* Start button on the home page.
+* Question and choice of answers on display.
+* Pointer effect with Hover when hovering over answers and buttons.
+* Score panel.
+* Restart and Home button.
+
 ## Deployment
 
 The project was created in Gitpod and then pushed to Github as a repository.
