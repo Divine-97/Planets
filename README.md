@@ -64,6 +64,7 @@ Check out the live website [here](https://divine-97.github.io/Planets-Quiz/).
 
   At the end of the game this feature will appear and will allow the user to click on either two of the buttons. I made sure that the restart button allows you do   the quiz again, or the user can click on the home page to return to the home page. I also made sure that the score/resutls of the quiz is calculated at the end     of the quiz.
 
+* Testing was also conducted on several devices (iphone 11, iphone XR, iphone 7plus, One plus 7t, tablet, Samsung galaxy s7, Macbook air) also on other web browsers (Safari, Chrome and firefox).
 
 
 ## Validator Testing
