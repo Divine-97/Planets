@@ -7,7 +7,8 @@ Check out the live website [here](https://divine-97.github.io/Planets-Quiz/).
 ![Image 10-07-2021 at 16 24](https://user-images.githubusercontent.com/81257331/125168100-a1765780-e19b-11eb-815c-d49c77751fc2.jpg)
 
 
-This is website is a Planet quiz game with basic questions about our Planets. The main purpose of this quiz is to test out the users knowledge for planets.
+This is website is a Planet quiz game with basic questions about our Planets. The main purpose of this quiz is to test out the users knowledge for planets. This quiz is not only targeted to people that are interested in Planets but is targeted to everyone, as this quiz has basic questions that most people have knowledge of. This website is fully responsive, this Javascript quiz will allow the user select an answer from a list of answer choices. It will also display quiz results to respondents at the end of the quiz.
+
 
 ## Features
 * Heading introduction to the game.
@@ -49,3 +50,5 @@ The page will automatically refresh and display a url link to the website.
  
  * Javascript
   No errors were found passing through Jshint.
+  
+  ## Credits
