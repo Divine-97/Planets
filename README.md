@@ -41,7 +41,7 @@ Check out the live website [here](https://divine-97.github.io/Planets-Quiz/).
 
 ## Features Left to Implement
  * In the future i would want the user to rate my quiz.
- * I want the users to have accounts so they can log in and be able to play against other users.
+ * I want the users to have accounts so they can log in and be able to play against other users as well.
  * I would like to add a top score feature so users can see their scores against others.
 
 
