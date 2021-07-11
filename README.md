@@ -74,6 +74,6 @@ The page will automatically refresh and display a url link to the website.
  No eerors were found passing through the official[(Jigsaw)Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdivine-97.github.io%2FPlanets-Quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
  
  * Javascript
-  No errors were found passing through Jshint.
+  No errors were found passing through [Jshint](https://jshint.com/)
   
   ## Credits
