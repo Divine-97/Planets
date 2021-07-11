@@ -43,37 +43,72 @@ This is website is a Planet quiz game with basic questions about our Planets. Th
   ![Screenshot 2021-07-11 at 14 07 01](https://user-images.githubusercontent.com/81257331/125204888-4fa2ff80-e277-11eb-867d-5f2038af7bc7.jpeg)
 
 
-## Deployment
-
-The project was created in Gitpod and then pushed to Github as a repository.
-
-Adding and Commiting Files
-
-To add files to the repository you will have to:
-
-Type "git add . " in the command line
-Then type "git commit -m" followed by your commit message
-Then type "git push" to push your changes to send your new work to the repository.
-Deploying the site
-
-To deploy the project you will have to:
-
-Login to Github
-Click the settings button when in the repository
-Scroll down to the pages section
-Under source, click the dropdown called "none" and change it to master branch
-The page will automatically refresh and display a url link to the website.
 
 ## Testing
+  To test the webpage and it's features I clicked on every button to make sure there were no issues.
+
+  * The Heading and Start button
+
+  The heading is visible on the home page and all pages so the user is aware of the title of the quiz. The start button is also visible on the home page and allows   the user to start the quiz when clicked on.
+
+  * Question and Answer options
+
+  All questions and answer options are visible for the user as the quiz goes on. All answer options can be selected with no issues.
+
+  * Pointer effect when Hovered over
+
+  This feature has no issues on all answer options. The correct answer will turn green and the other two wrong answers will turn red when an answer is selceted.     This feature is functional on every Question.
+
+  * Score Panel
+
+  I have made sure tbe score is calcuted when the user clicks either the correct or incorrect answer. This feature has no issues.
+
+  * Restart and Home Button
+
+  At the end of the game this feature will appear and will allow the user to click on either two of the buttons. I made sure that the restart button allows you do   the quiz again, or the user can click on the home page to return to the home page. I also made sure that the score/resutls of the quiz is calculated at the end     of the quiz.
+
+
+
 ## Validator Testing
 
-* HTML
- No errors were found passing through the official[W3C Markup Validator](https://validator.w3.org/)
+  * HTML
+  No errors were found passing through the official[W3C Markup Validator](https://validator.w3.org/)
 
-* CSS
- No eerors were found passing through the official[(Jigsaw)Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdivine-97.github.io%2FPlanets-Quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+  * CSS
+  No eerors were found passing through the official[(Jigsaw)Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdivine-97.github.io%2FPlanets-Quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
  
- * Javascript
+  * Javascript
   No errors were found passing through [Jshint](https://jshint.com/)
   
+    * There are 17 functions in this file
+    * Function with the largest signature take 2 arguments, while the median is 0
+    * Largest function has 8 statements in it, while the median is 2
+    * The most complex function has a cyclomatic complexity value of 2 while the median is 1
+  
+  
+  ## Deployment
+
+  The project was created in Gitpod and then pushed to Github as a repository.
+
+  Adding and Commiting Files
+
+  To add files to the repository you will have to:
+
+  Type "git add . " in the command line
+  Then type "git commit -m" followed by your commit message
+  Then type "git push" to push your changes to send your new work to the repository.
+  Deploying the site
+
+  To deploy the project you will have to:
+
+  Login to Github
+  Click the settings button when in the repository
+  Scroll down to the pages section
+  Under source, click the dropdown called "none" and change it to master branch
+  The page will automatically refresh and display a url link to the website.
+  
+  
   ## Credits
+  
+  
+  
