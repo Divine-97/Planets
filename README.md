@@ -1,14 +1,11 @@
 # **Planets Quiz** #
 
 ## Description
-
-Check out the live website [here](https://divine-97.github.io/Planets-Quiz/). 
-
 ![Image 10-07-2021 at 16 24](https://user-images.githubusercontent.com/81257331/125168100-a1765780-e19b-11eb-815c-d49c77751fc2.jpg)
-
 
 This is website is a Planet quiz game with basic questions about our Planets. The main purpose of this quiz is to test out the users knowledge for planets. This quiz is not only targeted to people that are interested in Planets but is targeted to everyone, as this quiz has basic questions that most people have knowledge of. This website is fully responsive, this Javascript quiz will allow the user select an answer from a list of answer choices. It will also display quiz results to respondents at the end of the quiz.
 
+Check out the live website [here](https://divine-97.github.io/Planets-Quiz/). 
 
 ## Features
 * Heading introduction to the game and Start Button
@@ -107,8 +104,15 @@ This is website is a Planet quiz game with basic questions about our Planets. Th
   Under source, click the dropdown called "none" and change it to master branch
   The page will automatically refresh and display a url link to the website.
   
+  The live link can be found [here](https://divine-97.github.io/Planets-Quiz/)
+  
   
   ## Credits
   
+  * The background image was downloaded from [Planets images](https://www.google.com/search?q=planets+images&sxsrf=ALeKk02OFZmG6oCs6VYgJ_Yk9oUPSdLJ2w:1626027896126&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjKvJL50dvxAhXPYMAKHdc0D5QQ_AUoAXoECAEQAw&biw=1440&bih=821)
+  * Some pieces of my code and Idea of my quiz was taken from[Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
+  * A few of my questions were taken from [Solar System Quiz](https://www.dkfindout.com/us/quiz/space/take-solar-system-quiz/)
+  * I used google to do my research whenever I had problems with my code.
+  * I would like to thank Tutor support for the assistance and also my Mentor.
   
   
