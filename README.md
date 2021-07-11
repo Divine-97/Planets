@@ -39,6 +39,10 @@ Check out the live website [here](https://divine-97.github.io/Planets-Quiz/).
 
   ![Screenshot 2021-07-11 at 14 07 01](https://user-images.githubusercontent.com/81257331/125204888-4fa2ff80-e277-11eb-867d-5f2038af7bc7.jpeg)
 
+## Features Left to Implement
+ * In the future i would want the user to rate my quiz.
+ * I want the users to have accounts so they can log in and be able to play against other users.
+ * I would like to add a top score feature so users can see their scores against others.
 
 
 ## Testing
